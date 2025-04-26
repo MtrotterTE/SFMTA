@@ -1,0 +1,302 @@
+{
+  "48": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "L",
+    "vehicleRef": "2002",
+    "vehicleLongitude": "-122.478226",
+    "vehicleLatitude": "37.7429123"
+  },
+  "49": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "M",
+    "vehicleRef": "2003",
+    "vehicleLongitude": "-122.402222",
+    "vehicleLatitude": "37.7887154"
+  },
+  "50": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "J",
+    "vehicleRef": "2004",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.426971",
+    "vehicleLatitude": "37.7467957"
+  },
+  "51": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "N",
+    "vehicleRef": "2005",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.46463",
+    "vehicleLatitude": "37.7641716"
+  },
+  "52": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "L",
+    "vehicleRef": "2007",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.501869",
+    "vehicleLatitude": "37.74189"
+  },
+  "53": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "T",
+    "vehicleRef": "2008",
+    "vehicleLongitude": "-122.393654",
+    "vehicleLatitude": "37.7760773"
+  },
+  "54": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "L",
+    "vehicleRef": "2009",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.434593",
+    "vehicleLatitude": "37.7630959"
+  },
+  "56": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "T",
+    "vehicleRef": "2012",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.387413",
+    "vehicleLatitude": "37.7441711"
+  },
+  "58": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "N",
+    "vehicleRef": "2014",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.494728",
+    "vehicleLatitude": "37.7609215"
+  },
+  "59": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "J",
+    "vehicleRef": "2015",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.392784",
+    "vehicleLatitude": "37.7937889"
+  },
+  "61": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "T",
+    "vehicleRef": "2018",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.392174",
+    "vehicleLatitude": "37.774826"
+  },
+  "63": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "N",
+    "vehicleRef": "2020",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.508751",
+    "vehicleLatitude": "37.7603378"
+  },
+  "66": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "T",
+    "vehicleRef": "2023",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.388443",
+    "vehicleLatitude": "37.7587891"
+  },
+  "67": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "N",
+    "vehicleRef": "2024",
+    "vehicleAtStop": "true",
+    "vehicleLongitude": "-122.463638",
+    "vehicleLatitude": "37.764183"
+  },
+  "69": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "N",
+    "vehicleRef": "2028",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.397552",
+    "vehicleLatitude": "37.7735329"
+  },
+  "71": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "M",
+    "vehicleRef": "2030",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.446121",
+    "vehicleLatitude": "37.720005"
+  },
+  "72": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "T",
+    "vehicleRef": "2031",
+    "vehicleLongitude": "-122.408157",
+    "vehicleLatitude": "37.7949448"
+  },
+  "82": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "N",
+    "vehicleRef": "2043",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.397797",
+    "vehicleLatitude": "37.7734222"
+  },
+  "84": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "J",
+    "vehicleRef": "2045",
+    "vehicleLongitude": "-122.428459",
+    "vehicleLatitude": "37.7615509"
+  },
+  "89": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "T",
+    "vehicleRef": "2050",
+    "vehicleLongitude": "-122.388031",
+    "vehicleLatitude": "37.755085"
+  },
+  "91": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "L",
+    "vehicleRef": "2053",
+    "vehicleLongitude": "-122.402351",
+    "vehicleLatitude": "37.7884407"
+  },
+  "92": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "T",
+    "vehicleRef": "2054",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.405403",
+    "vehicleLatitude": "37.7082443"
+  },
+  "94": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "T",
+    "vehicleRef": "2056",
+    "vehicleAtStop": "true",
+    "vehicleLongitude": "-122.387733",
+    "vehicleLatitude": "37.7622681"
+  },
+  "96": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "J",
+    "vehicleRef": "2059",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.447014",
+    "vehicleLatitude": "37.7210884"
+  },
+  "97": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "N",
+    "vehicleRef": "2060",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.487206",
+    "vehicleLatitude": "37.7612724"
+  },
+  "100": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "M",
+    "vehicleRef": "2064",
+    "vehicleAtStop": "true",
+    "vehicleLongitude": "-122.47477",
+    "vehicleLatitude": "37.7294388"
+  },
+  "101": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "J",
+    "vehicleRef": "2065",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.424751",
+    "vehicleLatitude": "37.7383461"
+  },
+  "106": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "L",
+    "vehicleRef": "2073",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.504951",
+    "vehicleLatitude": "37.7361183"
+  },
+  "107": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "K",
+    "vehicleRef": "2074",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.446815",
+    "vehicleLatitude": "37.7209625"
+  },
+  "108": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "T",
+    "vehicleRef": "2078",
+    "vehicleLongitude": "-122.388931",
+    "vehicleLatitude": "37.7397766"
+  },
+  "109": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "K",
+    "vehicleRef": "2079",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.44725",
+    "vehicleLatitude": "37.7214165"
+  },
+  "110": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "M",
+    "vehicleRef": "2082",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.473648",
+    "vehicleLatitude": "37.7182541"
+  },
+  "112": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "N",
+    "vehicleRef": "2085",
+    "vehicleLongitude": "-122.389709",
+    "vehicleLatitude": "37.7906227"
+  },
+  "116": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "N",
+    "vehicleRef": "2090",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.393318",
+    "vehicleLatitude": "37.7940407"
+  },
+  "117": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "K",
+    "vehicleRef": "2091",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.471756",
+    "vehicleLatitude": "37.7330437"
+  },
+  "118": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "M",
+    "vehicleRef": "2095",
+    "vehicleLongitude": "-122.472153",
+    "vehicleLatitude": "37.716713"
+  },
+  "132": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "K",
+    "vehicleRef": "2112",
+    "vehicleLongitude": "-122.458885",
+    "vehicleLatitude": "37.7481956"
+  },
+  "134": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "K",
+    "vehicleRef": "2121",
+    "vehicleAtStop": "",
+    "vehicleLongitude": "-122.391266",
+    "vehicleLatitude": "37.7926483"
+  },
+  "146": {
+    "timestamp": "2025-04-26T05:38:32Z",
+    "lineRef": "M",
+    "vehicleRef": "2154",
+    "vehicleLongitude": "-122.407089",
+    "vehicleLatitude": "37.7846985"
+  }
+}
