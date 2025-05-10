@@ -94,5 +94,3 @@ const intervalId = setInterval(() => {
 
 // to run program:
 // node --input-type=module main.js
-
-// TODO: Clean up indexes on finalData object if only using metro lines
