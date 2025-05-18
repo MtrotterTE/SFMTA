@@ -36,9 +36,34 @@ async function readFiles() {
             }
         });
 
+        let vehicleStoppedArrayK = [];
         // Cycle through K line data
         kLineData.forEach((entity) => {
-            console.log("Entity: ", entity);
+            if (entity.speed === 0) {
+                if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
+                    console.log('Vehicle already stopped');
+                } else {
+                    console.log('Vehicle just started to stop');
+                    vehicleStoppedArrayK.push(entity.vehicle_id);
+                }
+            } else if (entity.speed <= 7) {
+                if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
+                    // still at stop
+                    console.log('Vehicle moving but still stopped');
+                } else {
+                    // do nothing
+                    console.log('Vehicle slow but was not stopped');
+                }
+            } else {
+                if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
+                    // vehicle no longer stopped, remove from array
+                    vehicleStoppedArrayK = vehicleStoppedArrayK.filter(vehicle => vehicle !== entity.vehicle_id);
+                    console.log('Vehicle no longer stopped');
+                } else {
+                    // do nothing
+                    console.log('Vehicle still moving');
+                }
+            }
         });
 
         console.log('End of program.');
