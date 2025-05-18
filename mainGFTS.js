@@ -57,6 +57,7 @@ function pollData() {
                         const tempData = {
                             "vehicle_id": entity.vehicle?.vehicle?.id,
                             "trip_id": entity.vehicle?.trip?.tripId,
+                            "direction_id": entity.vehicle?.trip?.directionId,
                             "route_id": entity.vehicle?.trip?.routeId,
                             "latitude": entity.vehicle?.position?.latitude,
                             "longitude": entity.vehicle?.position?.longitude,

@@ -1,0 +1,333 @@
+
+{
+    "K": {
+        "westbound": {
+            "stops": [
+                {
+                    "stop_id": "17217",
+                    "stop_name": "Embarcadero Station",
+                    "location": {
+                        "latitude": 37.793138,
+                        "longitude": -122.396532
+                    }
+                },
+                {
+                    "stop_id": "16994",
+                    "stop_name": "Montgomery Station",
+                    "location": {
+                        "latitude": 37.789407,
+                        "longitude": -122.401248
+                    }
+                },
+                {
+                    "stop_id": "16995",
+                    "stop_name": "Powell Station",
+                    "location": {
+                        "latitude": 37.784899,
+                        "longitude": -122.406938
+                    }
+                },
+                {
+                    "stop_id": "16997",
+                    "stop_name": "Civic Center Station",
+                    "location": {
+                        "latitude": 37.779708,
+                        "longitude": -122.413516
+                    }
+                },
+                {
+                    "stop_id": "16996",
+                    "stop_name": "Van Ness Station",
+                    "location": {
+                        "latitude": 37.775152,
+                        "longitude": -122.419267
+                    }
+                },
+                {
+                    "stop_id": "16998",
+                    "stop_name": "Church Station",
+                    "location": {
+                        "latitude": 37.767435,
+                        "longitude": -122.429043
+                    }
+                },
+                {
+                    "stop_id": "16991",
+                    "stop_name": "Castro Station",
+                    "location": {
+                        "latitude": 37.762699,
+                        "longitude": -122.435150
+                    }
+                },
+                {
+                    "stop_id": "16993",
+                    "stop_name": "Forest Hill Station",
+                    "location": {
+                        "latitude": 37.747834,
+                        "longitude": -122.459137
+                    }
+                },
+                {
+                    "stop_id": "16739",
+                    "stop_name": "West Portal Station",
+                    "location": {
+                        "latitude": 37.741171,
+                        "longitude": -122.465609
+                    }
+                },
+                {
+                    "stop_id": "17125",
+                    "stop_name": "West Portal Ave & 14th Ave",
+                    "location": {
+                        "latitude": 37.737978,
+                        "longitude": -122.469068
+                    }
+                },
+                {
+                    "stop_id": "16503",
+                    "stop_name": "West Portal Ave & Sloat Blvd (Saint Francis Cir)",
+                    "location": {
+                        "latitude": 37.735376,
+                        "longitude": -122.471308
+                    }
+                },
+                {
+                    "stop_id": "17114",
+                    "stop_name": "Junipero Serra Blvd & Ocean Ave",
+                    "location": {
+                        "latitude": 37.731452,
+                        "longitude": -122.471771
+                    }
+                },
+                {
+                    "stop_id": "15807",
+                    "stop_name": "Ocean Ave & San Leandro Way",
+                    "location": {
+                        "latitude": 37.729977,
+                        "longitude": -122.469342
+                    }
+                },
+                {
+                    "stop_id": "15780",
+                    "stop_name": "Ocean Ave & Aptos Ave",
+                    "location": {
+                        "latitude": 37.728327,
+                        "longitude": -122.467725
+                    }
+                },
+                {
+                    "stop_id": "15808",
+                    "stop_name": "Ocean Ave & Victoria St",
+                    "location": {
+                        "latitude": 37.726029,
+                        "longitude": -122.464337
+                    }
+                },
+                {
+                    "stop_id": "15793",
+                    "stop_name": "Ocean Ave & Jules Ave",
+                    "location": {
+                        "latitude": 37.724955,
+                        "longitude": -122.461390
+                    }
+                },
+                {
+                    "stop_id": "15798",
+                    "stop_name": "Ocean Ave & Miramar Ave",
+                    "location": {
+                        "latitude": 37.724313,
+                        "longitude": -122.458223
+                    }
+                },
+                {
+                    "stop_id": "15795",
+                    "stop_name": "Ocean Ave & Lee St",
+                    "location": {
+                        "latitude": 37.723447,
+                        "longitude": -122.454108
+                    }
+                },
+                {
+                    "stop_id": "15785",
+                    "stop_name": "Ocean Ave/CCSF Pedestrian Bridge",
+                    "location": {
+                        "latitude": 37.722998,
+                        "longitude": -122.451228
+                    }
+                },
+                {
+                    "stop_id": "15418",
+                    "stop_name": "Balboa Park BART Mezzanine Level",
+                    "location": {
+                        "latitude": 37.721809,
+                        "longitude": -122.447425
+                    }
+                }
+            ]
+        },
+        "eastbound": {
+            "stops": [
+                {
+                    "stop_id": "17778",
+                    "stop_name": "San Jose & Geneva Ave",
+                    "location": {
+                        "latitude": 37.721238,
+                        "longitude": -122.446222
+                    }
+                },
+                {
+                    "stop_id": "15784",
+                    "stop_name": "Ocean Ave/CCSF Pedestrian Bridge",
+                    "location": {
+                        "latitude": 37.722998,
+                        "longitude": -122.451228
+                    }
+                },
+                {
+                    "stop_id": "15794",
+                    "stop_name": "Ocean Ave & Lee St",
+                    "location": {
+                        "latitude": 37.723447,
+                        "longitude": -122.454108
+                    }
+                },
+                {
+                    "stop_id": "15797",
+                    "stop_name": "Ocean Ave & Miramar Ave",
+                    "location": {
+                        "latitude": 37.724313,
+                        "longitude": -122.458223
+                    }
+                },
+                {
+                    "stop_id": "15787",
+                    "stop_name": "Ocean Ave & Dorado Ter",
+                    "location": {
+                        "latitude": 37.724957,
+                        "longitude": -122.461059
+                    }
+                },
+                {
+                    "stop_id": "15788",
+                    "stop_name": "Ocean Ave & Fairfield Way",
+                    "location": {
+                        "latitude": 37.726008,
+                        "longitude": -122.464072
+                    }
+                },
+                {
+                    "stop_id": "15779",
+                    "stop_name": "Ocean Ave & Aptos Ave",
+                    "location": {
+                        "latitude": 37.728327,
+                        "longitude": -122.467725
+                    }
+                },
+                {
+                    "stop_id": "15806",
+                    "stop_name": "Ocean Ave & San Leandro Way",
+                    "location": {
+                        "latitude": 37.729977,
+                        "longitude": -122.469342
+                    }
+                },
+                {
+                    "stop_id": "17113",
+                    "stop_name": "Junipero Serra Blvd & Ocean Ave",
+                    "location": {
+                        "latitude": 37.731452,
+                        "longitude": -122.471771
+                    }
+                },
+                {
+                    "stop_id": "17109",
+                    "stop_name": "West Portal Ave & Sloat Blvd (Saint Francis Cir)",
+                    "location": {
+                        "latitude": 37.735376,
+                        "longitude": -122.471308
+                    }
+                },
+                {
+                    "stop_id": "16898",
+                    "stop_name": "West Portal Ave & 14th Ave",
+                    "location": {
+                        "latitude": 37.737978,
+                        "longitude": -122.469068
+                    }
+                },
+                {
+                    "stop_id": "16740",
+                    "stop_name": "West Portal Station",
+                    "location": {
+                        "latitude": 37.741171,
+                        "longitude": -122.465609
+                    }
+                },
+                {
+                    "stop_id": "15730",
+                    "stop_name": "Forest Hill Station",
+                    "location": {
+                        "latitude": 37.747834,
+                        "longitude": -122.459137
+                    }
+                },
+                {
+                    "stop_id": "15728",
+                    "stop_name": "Castro Station",
+                    "location": {
+                        "latitude": 37.762699,
+                        "longitude": -122.435150
+                    }
+                },
+                {
+                    "stop_id": "15726",
+                    "stop_name": "Church Station",
+                    "location": {
+                        "latitude": 37.767435,
+                        "longitude": -122.429043
+                    }
+                },
+                {
+                    "stop_id": "15419",
+                    "stop_name": "Van Ness Station",
+                    "location": {
+                        "latitude": 37.775152,
+                        "longitude": -122.419267
+                    }
+                },
+                {
+                    "stop_id": "15727",
+                    "stop_name": "Civic Center Station",
+                    "location": {
+                        "latitude": 37.779708,
+                        "longitude": -122.413516
+                    }
+                },
+                {
+                    "stop_id": "15417",
+                    "stop_name": "Powell Station",
+                    "location": {
+                        "latitude": 37.784899,
+                        "longitude": -122.406938
+                    }
+                },
+                {
+                    "stop_id": "15731",
+                    "stop_name": "Montgomery Station",
+                    "location": {
+                        "latitude": 37.789407,
+                        "longitude": -122.401248
+                    }
+                },
+                {
+                    "stop_id": "16992",
+                    "stop_name": "Embarcadero Station",
+                    "location": {
+                        "latitude": 37.793138,
+                        "longitude": -122.396532
+                    }
+                }
+            ]
+        }
+    }
+}
