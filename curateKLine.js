@@ -42,19 +42,13 @@ async function readFiles() {
             if (entity.speed === 0) {
                 if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
                     console.log('Vehicle already stopped');
+                    // do nothing
                 } else {
                     console.log('Vehicle just started to stop');
                     vehicleStoppedArrayK.push(entity.vehicle_id);
+                    // start data curation
                 }
-            } else if (entity.speed <= 7) {
-                if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
-                    // still at stop
-                    console.log('Vehicle moving but still stopped');
-                } else {
-                    // do nothing
-                    console.log('Vehicle slow but was not stopped');
-                }
-            } else {
+            } else if (entity.speed > 7) {
                 if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
                     // vehicle no longer stopped, remove from array
                     vehicleStoppedArrayK = vehicleStoppedArrayK.filter(vehicle => vehicle !== entity.vehicle_id);
