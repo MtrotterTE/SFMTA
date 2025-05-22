@@ -60,7 +60,7 @@ async function readFiles() {
                     // push entity to array
                     vehicleStoppedEntitiesK.push(entity);
                 }
-            } else if (entity.speed > 7) {
+            } else if (entity.speed > 3.12928) { // 3.12928 m/s = 7 mph
                 if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
                     /*if (entity.vehicle_id == 2149) {
                         console.log('Vehicle no longer stopped');
