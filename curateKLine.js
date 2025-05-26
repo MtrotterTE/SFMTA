@@ -41,15 +41,62 @@ async function readFiles() {
 
         let vehicleStoppedArrayK = [];
         let vehicleStoppedEntitiesK = [];
-        let vehicleStoppedEntitiesKFinal = [];
+        let traversedKLineData = [];
         // Cycle through K line data
         kLineData.forEach((entity) => {
-            if (entity.vehicle_id === "2071" && entity.trip_id === "11735474_M21" && entity.iteration >= 501) {
-                console.log(entity);
+            if (entity.vehicle_id === "2115" && entity.trip_id === "11735418_M21" && entity.iteration >= 1519) {
+                console.log("Entity::", entity);
             }
             if (entity.speed === 0) {
                 if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
-                    // do nothing
+                    vehicleStoppedEntitiesK.forEach((stoppedEntity) => {
+                        // if vehicle is already stopped
+                        if (stoppedEntity.vehicle_id === entity.vehicle_id) {
+                            // if longitude and latitude are the same, do nothing
+                            if (entity.latitude === stoppedEntity.latitude && entity.longitude === stoppedEntity.longitude) {
+                                // vehicle is still at the same stop, do nothing
+                            } else { // vehicle has moved but speed is still 0
+                                // calculate speed since last data update
+                                let tempTimeSinceLastUpdate = 0;
+                                let tempDistanceMoved = 0;
+                                for (let i = traversedKLineData.length - 1; i >= 0; i--) {
+                                    if (traversedKLineData[i].vehicle_id === entity.vehicle_id) {// find the latest entity in traversedKLineData with the same vehicle_id
+                                        tempTimeSinceLastUpdate = getTimeDifferenceInSeconds(traversedKLineData[i].timestamp, entity.timestamp);
+                                        tempDistanceMoved = getDistanceInFeet(traversedKLineData[i].latitude, traversedKLineData[i].longitude, entity.latitude, entity.longitude);
+                                        break; // exit loop once found
+                                    }
+                                } 
+                                let calculatedSpeed = (tempDistanceMoved / tempTimeSinceLastUpdate) * 0.3048; // speed in meters per second
+                                
+                                if (calculatedSpeed > 3.12928) { // 3.12928 m/s = 7 mph
+                                    // vehicle is more than 7 mph since last data update, add stop data to final array
+
+                                    let accurateTimeAtStop = 0;
+                                    let accurateDistanceMoved = 0;
+                                    
+                                    // find the latest entity in traversedKLineData with the same vehicle_id
+                                    for (let i = traversedKLineData.length - 1; i >= 0; i--) {
+                                        if (traversedKLineData[i].vehicle_id === entity.vehicle_id) {
+                                            accurateTimeAtStop = getTimeDifferenceInSeconds(stoppedEntity.timestamp, traversedKLineData[i].timestamp);
+                                            accurateDistanceMoved = getDistanceInFeet(stoppedEntity.latitude, stoppedEntity.longitude, traversedKLineData[i].latitude, traversedKLineData[i].longitude);
+                                            break; // exit loop once found
+                                        }
+                                    }
+
+                                    let tempOriginalEntity = stoppedEntity;
+                                    tempOriginalEntity.timeAtStop = accurateTimeAtStop;
+                                    tempOriginalEntity.distanceMoved = accurateDistanceMoved;
+
+                                    // add to parent object
+                                    finalData[index] = tempOriginalEntity;
+                                    index++;
+
+                                    // remove from array
+                                    vehicleStoppedEntitiesK = vehicleStoppedEntitiesK.filter(vehicle => vehicle !== stoppedEntity);
+                                }
+                            }
+                        }
+                    });
                 } else {
                     vehicleStoppedArrayK.push(entity.vehicle_id);
                     // start data curation
@@ -63,21 +110,30 @@ async function readFiles() {
                     // cycle through array with entities
                     vehicleStoppedEntitiesK.forEach((stoppedEntity) => {
                         if (stoppedEntity.vehicle_id === entity.vehicle_id) {
-                            let timeAtStop = getTimeDifferenceInSeconds(stoppedEntity.timestamp, entity.timestamp);
-                            let distanceMoved = getDistanceInFeet(stoppedEntity.latitude, stoppedEntity.longitude, entity.latitude, entity.longitude);
                             // determine if direction_id is westbound or eastbound
                             // cycle though westbound or eastbound stops
                             // check if vehicle is at stop
 
+                            let accurateTimeAtStop = 0;
+                            let accurateDistanceMoved = 0;
+
+                            // find the latest entity in traversedKLineData with the same vehicle_id
+                            for (let i = traversedKLineData.length - 1; i >= 0; i--) {
+                                if (traversedKLineData[i].vehicle_id === entity.vehicle_id) {
+                                    accurateTimeAtStop = getTimeDifferenceInSeconds(stoppedEntity.timestamp, traversedKLineData[i].timestamp);
+                                    accurateDistanceMoved = getDistanceInFeet(stoppedEntity.latitude, stoppedEntity.longitude, traversedKLineData[i].latitude, traversedKLineData[i].longitude);
+                                    break; // exit loop once found
+                                }
+                            }
+
                             let tempOriginalEntity = stoppedEntity;
-                            tempOriginalEntity.timeAtStop = timeAtStop;
-                            tempOriginalEntity.distanceMoved = distanceMoved;
+                            tempOriginalEntity.timeAtStop = accurateTimeAtStop;
+                            tempOriginalEntity.distanceMoved = accurateDistanceMoved;
 
                             // add to parent object
                             finalData[index] = tempOriginalEntity;
                             index++;
 
-                            vehicleStoppedEntitiesKFinal.push(stoppedEntity);
                             // remove from array
                             vehicleStoppedEntitiesK = vehicleStoppedEntitiesK.filter(vehicle => vehicle !== stoppedEntity);
                         }
@@ -87,7 +143,57 @@ async function readFiles() {
                 } else {
                     // do nothing
                 }
+            } else { // vehicle is moving less than 7 mph
+                if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
+                    vehicleStoppedEntitiesK.forEach((stoppedEntity) => {
+                        if (stoppedEntity.vehicle_id === entity.vehicle_id) {
+                            // calculate speed since last data update
+                            let tempTimeSinceLastUpdate = 0;
+                            let tempDistanceMoved = 0;
+                            for (let i = traversedKLineData.length - 1; i >= 0; i--) {
+                                if (traversedKLineData[i].vehicle_id === entity.vehicle_id) {// find the latest entity in traversedKLineData with the same vehicle_id
+                                    tempTimeSinceLastUpdate = getTimeDifferenceInSeconds(traversedKLineData[i].timestamp, entity.timestamp);
+                                    tempDistanceMoved = getDistanceInFeet(traversedKLineData[i].latitude, traversedKLineData[i].longitude, entity.latitude, entity.longitude);
+                                    break; // exit loop once found
+                                }
+                            } 
+                            let calculatedSpeed = (tempDistanceMoved / tempTimeSinceLastUpdate) * 0.3048; // speed in meters per second
+
+                            if (calculatedSpeed > 3.12928) { // if speed is greater than 7 mph
+                                // vehicle is more than 7 mph since last data update, add stop data to final array
+
+                                let accurateTimeAtStop = 0;
+                                let accurateDistanceMoved = 0;
+                                
+                                // find the latest entity in traversedKLineData with the same vehicle_id
+                                for (let i = traversedKLineData.length - 1; i >= 0; i--) {
+                                    if (traversedKLineData[i].vehicle_id === entity.vehicle_id) {
+                                        accurateTimeAtStop = getTimeDifferenceInSeconds(stoppedEntity.timestamp, traversedKLineData[i].timestamp);
+                                        accurateDistanceMoved = getDistanceInFeet(stoppedEntity.latitude, stoppedEntity.longitude, traversedKLineData[i].latitude, traversedKLineData[i].longitude);
+                                        break; // exit loop once found
+                                    }
+                                }
+
+                                let tempOriginalEntity = stoppedEntity;
+                                tempOriginalEntity.timeAtStop = accurateTimeAtStop;
+                                tempOriginalEntity.distanceMoved = accurateDistanceMoved;
+
+                                // add to parent object
+                                finalData[index] = tempOriginalEntity;
+                                index++;
+
+                                // remove from array
+                                vehicleStoppedEntitiesK = vehicleStoppedEntitiesK.filter(vehicle => vehicle !== stoppedEntity);
+                            } else { // speed is less than 7 mph
+                                // vehicle is still moving less than 7 mph, do nothing
+                            }
+                        }
+                    });
+                } else {
+                    // not already in stopped array, do nothing
+                }
             }
+            traversedKLineData.push(entity);
         });
 
         // Convert parent object to JSON string
@@ -167,7 +273,4 @@ function getDistanceInFeet(lat1, lon1, lat2, lon2) {
   }
 
 readFiles();
-let debugDistance = getDistanceInFeet(37.72346115112305, -122.45393371582031, 37.72577667236328, -122.46345520019531);
 console.log('Program started, reading files...');
-console.log('Debug distance:', debugDistance, 'feet');
-
