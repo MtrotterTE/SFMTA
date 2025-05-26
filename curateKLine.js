@@ -44,17 +44,13 @@ async function readFiles() {
         let vehicleStoppedEntitiesKFinal = [];
         // Cycle through K line data
         kLineData.forEach((entity) => {
+            if (entity.vehicle_id === "2071" && entity.trip_id === "11735474_M21" && entity.iteration >= 501) {
+                console.log(entity);
+            }
             if (entity.speed === 0) {
                 if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
-                    /*if (entity.vehicle_id == 2149) {
-                        console.log('Vehicle already stopped');
-                    }*/
                     // do nothing
                 } else {
-                    /*if (entity.vehicle_id == 2149) {
-                        console.log('Vehicle just started to stop');
-                        console.log('entity:', entity);
-                    }*/
                     vehicleStoppedArrayK.push(entity.vehicle_id);
                     // start data curation
                     // push entity to array
@@ -62,10 +58,6 @@ async function readFiles() {
                 }
             } else if (entity.speed > 3.12928) { // 3.12928 m/s = 7 mph
                 if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
-                    /*if (entity.vehicle_id == 2149) {
-                        console.log('Vehicle no longer stopped');
-                        console.log('entity:', entity);
-                    }*/
                     // vehicle no longer stopped, remove from array
                     vehicleStoppedArrayK = vehicleStoppedArrayK.filter(vehicle => vehicle !== entity.vehicle_id);
                     // cycle through array with entities
@@ -76,13 +68,6 @@ async function readFiles() {
                             // determine if direction_id is westbound or eastbound
                             // cycle though westbound or eastbound stops
                             // check if vehicle is at stop
-                            /*if (entity.vehicle_id == 2149) {
-                                console.log('Found match for vehicle no longer stopped');
-                                console.log('original entity:', stoppedEntity);
-                                console.log('no longer stopped entity:', entity);
-                                console.log('Time at stop:', timeAtStop);
-                                console.log('Distance moved:', distanceMoved);
-                            }*/
 
                             let tempOriginalEntity = stoppedEntity;
                             tempOriginalEntity.timeAtStop = timeAtStop;
@@ -97,15 +82,10 @@ async function readFiles() {
                             vehicleStoppedEntitiesK = vehicleStoppedEntitiesK.filter(vehicle => vehicle !== stoppedEntity);
                         }
                     });
-                    // if vehicle_id matches, remove from array
-                    // calculate time stopped
                     // determing if vehicle is at station
                     // push to final array
                 } else {
                     // do nothing
-                    /*if (entity.vehicle_id == 2149) {
-                        console.log('Vehicle still moving');
-                    }*/
                 }
             }
         });
@@ -187,4 +167,7 @@ function getDistanceInFeet(lat1, lon1, lat2, lon2) {
   }
 
 readFiles();
+let debugDistance = getDistanceInFeet(37.72346115112305, -122.45393371582031, 37.72577667236328, -122.46345520019531);
+console.log('Program started, reading files...');
+console.log('Debug distance:', debugDistance, 'feet');
 
