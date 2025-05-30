@@ -1,7 +1,7 @@
 
 {
     "K": {
-        "westbound": {
+        "outbound": {
             "stops": [
                 {
                     "stop_id": "17217",
@@ -165,7 +165,7 @@
                 }
             ]
         },
-        "eastbound": {
+        "inbound": {
             "stops": [
                 {
                     "stop_id": "17778",

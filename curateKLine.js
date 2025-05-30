@@ -19,8 +19,8 @@ async function readFiles() {
         const stopsData = JSON.parse(file2);
 
         let kLineData = [];
-        let kLineStopsWestbound = [];
-        let kLineStopsEastbound = [];
+        let kLineStopsOutbound = [];
+        let kLineStopsInbound = [];
 
         // Process vehicle data
         Object.entries(vehicleData).forEach(([key, value]) => {
@@ -34,8 +34,8 @@ async function readFiles() {
         Object.entries(stopsData).forEach(([key, value]) => {
             // Seperate stops data into metro line arrays
             if (key === "K") {
-                kLineStopsWestbound = value.westbound.stops;
-                kLineStopsEastbound = value.eastbound.stops;
+                kLineStopsOutbound = value.outbound.stops; // direction_id 0 for outbound
+                kLineStopsInbound = value.inbound.stops; // direction_id 1 for inbound
             }
         });
 
@@ -86,6 +86,38 @@ async function readFiles() {
                                     let tempOriginalEntity = stoppedEntity;
                                     tempOriginalEntity.timeAtStop = accurateTimeAtStop;
                                     tempOriginalEntity.distanceMoved = accurateDistanceMoved;
+                                    // check if vehicle is at station
+                                    if (tempOriginalEntity.direction_id === 0) { // outbound
+                                        let stopFound = false;
+                                        kLineStopsOutbound.forEach((stop) => {
+                                            if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, stop.location.latitude, stop.location.longitude, 500)) {
+                                                stopFound = true;
+                                                tempOriginalEntity.atStop = true;
+                                                tempOriginalEntity.stopId = stop.stop_id;
+                                                tempOriginalEntity.stopName = stop.stop_name;
+                                            }
+                                        });
+                                        if (!stopFound) {
+                                            tempOriginalEntity.atStop = false;
+                                            tempOriginalEntity.stopId = null;
+                                            tempOriginalEntity.stopName = null;
+                                        }
+                                    } else if (tempOriginalEntity.direction_id === 1) { // inbound
+                                        let stopFound = false;
+                                        kLineStopsInbound.forEach((stop) => {
+                                            if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, stop.location.latitude, stop.location.longitude, 500)) {
+                                                stopFound = true;
+                                                tempOriginalEntity.atStop = true;
+                                                tempOriginalEntity.stopId = stop.stop_id;
+                                                tempOriginalEntity.stopName = stop.stop_name;
+                                            }
+                                        });
+                                        if (!stopFound) {
+                                            tempOriginalEntity.atStop = false;
+                                            tempOriginalEntity.stopId = null;
+                                            tempOriginalEntity.stopName = null;
+                                        }
+                                    }
 
                                     // add to parent object
                                     finalData[index] = tempOriginalEntity;
@@ -129,6 +161,38 @@ async function readFiles() {
                             let tempOriginalEntity = stoppedEntity;
                             tempOriginalEntity.timeAtStop = accurateTimeAtStop;
                             tempOriginalEntity.distanceMoved = accurateDistanceMoved;
+                            // check if vehicle is at station
+                            if (tempOriginalEntity.direction_id === 0) { // outbound
+                                let stopFound = false;
+                                kLineStopsOutbound.forEach((stop) => {
+                                    if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, stop.location.latitude, stop.location.longitude, 500)) {
+                                        stopFound = true;
+                                        tempOriginalEntity.atStop = true;
+                                        tempOriginalEntity.stopId = stop.stop_id;
+                                        tempOriginalEntity.stopName = stop.stop_name;
+                                    }
+                                });
+                                if (!stopFound) {
+                                    tempOriginalEntity.atStop = false;
+                                    tempOriginalEntity.stopId = null;
+                                    tempOriginalEntity.stopName = null;
+                                }
+                            } else if (tempOriginalEntity.direction_id === 1) { // inbound
+                                let stopFound = false;
+                                kLineStopsInbound.forEach((stop) => {
+                                    if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, stop.location.latitude, stop.location.longitude, 500)) {
+                                        stopFound = true;
+                                        tempOriginalEntity.atStop = true;
+                                        tempOriginalEntity.stopId = stop.stop_id;
+                                        tempOriginalEntity.stopName = stop.stop_name;
+                                    }
+                                });
+                                if (!stopFound) {
+                                    tempOriginalEntity.atStop = false;
+                                    tempOriginalEntity.stopId = null;
+                                    tempOriginalEntity.stopName = null;
+                                }
+                            }
 
                             // add to parent object
                             finalData[index] = tempOriginalEntity;
