@@ -1,7 +1,7 @@
 import { readFile } from 'fs/promises';
 import fs from "fs";
 
-const sfmtaDataFile = './gfts_realtime_data_2025-05-16_8:00.json';
+const sfmtaDataFile = './gfts_realtime_data_2025-05-11_8:00.json';
 const stopsFile = './stops.json'
 let finalData = {};
 let index = 0;
@@ -21,6 +21,7 @@ async function readFiles() {
         let kLineData = [];
         let kLineStopsOutbound = [];
         let kLineStopsInbound = [];
+        let kLineIntersectionStops = [];
 
         // Process vehicle data
         Object.entries(vehicleData).forEach(([key, value]) => {
@@ -36,6 +37,7 @@ async function readFiles() {
             if (key === "K") {
                 kLineStopsOutbound = value.outbound.stops; // direction_id 0 for outbound
                 kLineStopsInbound = value.inbound.stops; // direction_id 1 for inbound
+                kLineIntersectionStops = value.intersections.stops;
             }
         });
 
@@ -44,9 +46,6 @@ async function readFiles() {
         let traversedKLineData = [];
         // Cycle through K line data
         kLineData.forEach((entity) => {
-            if (entity.vehicle_id === "2115" && entity.trip_id === "11735418_M21" && entity.iteration >= 1519) {
-                console.log("Entity::", entity);
-            }
             if (entity.speed === 0) {
                 if (vehicleStoppedArrayK.includes(entity.vehicle_id)) {
                     vehicleStoppedEntitiesK.forEach((stoppedEntity) => {
@@ -92,30 +91,54 @@ async function readFiles() {
                                         kLineStopsOutbound.forEach((stop) => {
                                             if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, stop.location.latitude, stop.location.longitude, 500)) {
                                                 stopFound = true;
-                                                tempOriginalEntity.atStop = true;
-                                                tempOriginalEntity.stopId = stop.stop_id;
-                                                tempOriginalEntity.stopName = stop.stop_name;
+                                                tempOriginalEntity.atStation = true;
+                                                tempOriginalEntity.stationId = stop.stop_id;
+                                                tempOriginalEntity.stationName = stop.stop_name;
                                             }
                                         });
                                         if (!stopFound) {
-                                            tempOriginalEntity.atStop = false;
-                                            tempOriginalEntity.stopId = null;
-                                            tempOriginalEntity.stopName = null;
+                                            tempOriginalEntity.atStation = false;
+                                            tempOriginalEntity.stationId = null;
+                                            tempOriginalEntity.stationName = null;
+                                            let intersectionFound = false;
+                                            kLineIntersectionStops.forEach((intersectionStop) => {
+                                                if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, intersectionStop.location.latitude, intersectionStop.location.longitude, 500)) {
+                                                    tempOriginalEntity.atIntersection = true;
+                                                    tempOriginalEntity.intersectionCrossStreet = intersectionStop.stop_name;
+                                                    intersectionFound = true;
+                                                }
+                                            });
+                                            if (!intersectionFound) {
+                                                tempOriginalEntity.atIntersection = false;
+                                                tempOriginalEntity.intersectionCrossStreet = null;
+                                            }
                                         }
                                     } else if (tempOriginalEntity.direction_id === 1) { // inbound
                                         let stopFound = false;
                                         kLineStopsInbound.forEach((stop) => {
                                             if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, stop.location.latitude, stop.location.longitude, 500)) {
                                                 stopFound = true;
-                                                tempOriginalEntity.atStop = true;
-                                                tempOriginalEntity.stopId = stop.stop_id;
-                                                tempOriginalEntity.stopName = stop.stop_name;
+                                                tempOriginalEntity.atStation = true;
+                                                tempOriginalEntity.stationId = stop.stop_id;
+                                                tempOriginalEntity.stationName = stop.stop_name;
                                             }
                                         });
                                         if (!stopFound) {
-                                            tempOriginalEntity.atStop = false;
-                                            tempOriginalEntity.stopId = null;
-                                            tempOriginalEntity.stopName = null;
+                                            tempOriginalEntity.atStation = false;
+                                            tempOriginalEntity.stationId = null;
+                                            tempOriginalEntity.stationName = null;
+                                            let intersectionFound = false;
+                                            kLineIntersectionStops.forEach((intersectionStop) => {
+                                                if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, intersectionStop.location.latitude, intersectionStop.location.longitude, 500)) {
+                                                    tempOriginalEntity.atIntersection = true;
+                                                    tempOriginalEntity.intersectionCrossStreet = intersectionStop.stop_name;
+                                                    intersectionFound = true;
+                                                }
+                                            });
+                                            if (!intersectionFound) {
+                                                tempOriginalEntity.atIntersection = false;
+                                                tempOriginalEntity.intersectionCrossStreet = null;
+                                            }
                                         }
                                     }
 
@@ -167,30 +190,54 @@ async function readFiles() {
                                 kLineStopsOutbound.forEach((stop) => {
                                     if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, stop.location.latitude, stop.location.longitude, 500)) {
                                         stopFound = true;
-                                        tempOriginalEntity.atStop = true;
-                                        tempOriginalEntity.stopId = stop.stop_id;
-                                        tempOriginalEntity.stopName = stop.stop_name;
+                                        tempOriginalEntity.atStation = true;
+                                        tempOriginalEntity.stationId = stop.stop_id;
+                                        tempOriginalEntity.stationName = stop.stop_name;
                                     }
                                 });
                                 if (!stopFound) {
-                                    tempOriginalEntity.atStop = false;
-                                    tempOriginalEntity.stopId = null;
-                                    tempOriginalEntity.stopName = null;
+                                    tempOriginalEntity.atStation = false;
+                                    tempOriginalEntity.stationId = null;
+                                    tempOriginalEntity.stationName = null;
+                                    let intersectionFound = false;
+                                    kLineIntersectionStops.forEach((intersectionStop) => {
+                                        if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, intersectionStop.location.latitude, intersectionStop.location.longitude, 500)) {
+                                            tempOriginalEntity.atIntersection = true;
+                                            tempOriginalEntity.intersectionCrossStreet = intersectionStop.stop_name;
+                                            intersectionFound = true;
+                                        }
+                                    });
+                                    if (!intersectionFound) {
+                                        tempOriginalEntity.atIntersection = false;
+                                        tempOriginalEntity.intersectionCrossStreet = null;
+                                    }
                                 }
                             } else if (tempOriginalEntity.direction_id === 1) { // inbound
                                 let stopFound = false;
                                 kLineStopsInbound.forEach((stop) => {
                                     if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, stop.location.latitude, stop.location.longitude, 500)) {
                                         stopFound = true;
-                                        tempOriginalEntity.atStop = true;
-                                        tempOriginalEntity.stopId = stop.stop_id;
-                                        tempOriginalEntity.stopName = stop.stop_name;
+                                        tempOriginalEntity.atStation = true;
+                                        tempOriginalEntity.stationId = stop.stop_id;
+                                        tempOriginalEntity.stationName = stop.stop_name;
                                     }
                                 });
                                 if (!stopFound) {
-                                    tempOriginalEntity.atStop = false;
-                                    tempOriginalEntity.stopId = null;
-                                    tempOriginalEntity.stopName = null;
+                                    tempOriginalEntity.atStation = false;
+                                    tempOriginalEntity.stationId = null;
+                                    tempOriginalEntity.stationName = null;
+                                    let intersectionFound = false;
+                                    kLineIntersectionStops.forEach((intersectionStop) => {
+                                        if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, intersectionStop.location.latitude, intersectionStop.location.longitude, 500)) {
+                                            tempOriginalEntity.atIntersection = true;
+                                            tempOriginalEntity.intersectionCrossStreet = intersectionStop.stop_name;
+                                            intersectionFound = true;
+                                        }
+                                    });
+                                    if (!intersectionFound) {
+                                        tempOriginalEntity.atIntersection = false;
+                                        tempOriginalEntity.intersectionCrossStreet = null;
+                                    }
                                 }
                             }
 
@@ -241,6 +288,62 @@ async function readFiles() {
                                 let tempOriginalEntity = stoppedEntity;
                                 tempOriginalEntity.timeAtStop = accurateTimeAtStop;
                                 tempOriginalEntity.distanceMoved = accurateDistanceMoved;
+                                // check if vehicle is at station
+                                if (tempOriginalEntity.direction_id === 0) { // outbound
+                                    let stopFound = false;
+                                    kLineStopsOutbound.forEach((stop) => {
+                                        if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, stop.location.latitude, stop.location.longitude, 500)) {
+                                            stopFound = true;
+                                            tempOriginalEntity.atStation = true;
+                                            tempOriginalEntity.stationId = stop.stop_id;
+                                            tempOriginalEntity.stationName = stop.stop_name;
+                                        }
+                                    });
+                                    if (!stopFound) {
+                                        tempOriginalEntity.atStation = false;
+                                        tempOriginalEntity.stationId = null;
+                                        tempOriginalEntity.stationName = null;
+                                        let intersectionFound = false;
+                                        kLineIntersectionStops.forEach((intersectionStop) => {
+                                            if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, intersectionStop.location.latitude, intersectionStop.location.longitude, 500)) {
+                                                tempOriginalEntity.atIntersection = true;
+                                                tempOriginalEntity.intersectionCrossStreet = intersectionStop.stop_name;
+                                                intersectionFound = true;
+                                            }
+                                        });
+                                        if (!intersectionFound) {
+                                            tempOriginalEntity.atIntersection = false;
+                                            tempOriginalEntity.intersectionCrossStreet = null;
+                                        }
+                                    }
+                                } else if (tempOriginalEntity.direction_id === 1) { // inbound
+                                    let stopFound = false;
+                                    kLineStopsInbound.forEach((stop) => {
+                                        if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, stop.location.latitude, stop.location.longitude, 500)) {
+                                            stopFound = true;
+                                            tempOriginalEntity.atStation = true;
+                                            tempOriginalEntity.stationId = stop.stop_id;
+                                            tempOriginalEntity.stationName = stop.stop_name;
+                                        }
+                                    });
+                                    if (!stopFound) {
+                                        tempOriginalEntity.atStation = false;
+                                        tempOriginalEntity.stationId = null;
+                                        tempOriginalEntity.stationName = null;
+                                        let intersectionFound = false;
+                                        kLineIntersectionStops.forEach((intersectionStop) => {
+                                            if (isWithinDistance(tempOriginalEntity.latitude, tempOriginalEntity.longitude, intersectionStop.location.latitude, intersectionStop.location.longitude, 500)) {
+                                                tempOriginalEntity.atIntersection = true;
+                                                tempOriginalEntity.intersectionCrossStreet = intersectionStop.stop_name;
+                                                intersectionFound = true;
+                                            }
+                                        });
+                                        if (!intersectionFound) {
+                                            tempOriginalEntity.atIntersection = false;
+                                            tempOriginalEntity.intersectionCrossStreet = null;
+                                        }
+                                    }
+                                }
 
                                 // add to parent object
                                 finalData[index] = tempOriginalEntity;

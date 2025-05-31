@@ -328,6 +328,269 @@
                     }
                 }
             ]
+        },
+        "intersections": {
+            "stops": [
+                {
+                    "stop_name": "Embarcadero & Mission",
+                    "location": {
+                        "latitude": 37.7937126159668,
+                        "longitude": -122.39266967773438
+                    }
+                },
+                {
+                    "stop_name": "West Portal Ave & Dewey Blvd",
+                    "location": {
+                        "latitude": 37.74314880371094,
+                        "longitude": -122.46398162841797
+                    }
+                },
+                {
+                    "stop_name": "Market St & Duboce Ave",
+                    "location": {
+                        "latitude": 37.769737243652344,
+                        "longitude": -122.4261703491211
+                    }
+                },
+                {
+                    "stop_name": "Junipero Serra Blvd & Monterey Blvd",
+                    "location": {
+                        "latitude": 37.73344039916992,
+                        "longitude": -122.4716567993164
+                    }
+                },
+                {
+                    "stop_name": "Market St & Steuart St",
+                    "location": {
+                        "latitude": 37.7943000793457,
+                        "longitude": -122.3948745727539
+                    }
+                },
+                {
+                    "stop_name": "Market St & Franklin St",
+                    "location": {
+                        "latitude": 37.77408218383789,
+                        "longitude": -122.42059326171875
+                    }
+                },
+                {
+                    "stop_name": "Embarcadero & Howard St",
+                    "location": {
+                        "latitude": 37.79264831542969,
+                        "longitude": -122.39126586914062
+                    }
+                },
+                {
+                    "stop_name": "Howlth St & Ocean Ave",
+                    "location": {
+                        "latitude": 37.7230110168457,
+                        "longitude": -122.44945526123047
+                    }
+                },
+                {
+                    "stop_name": "Market St & Golden Gate Ave",
+                    "location": {
+                        "latitude": 37.78216552734375,
+                        "longitude": -122.41051483154297
+                    }
+                },
+                {
+                    "stop_name": "West Portal Ave & Vicente St",
+                    "location": {
+                        "latitude": 37.73945999145508,
+                        "longitude": -122.46732330322266
+                    }
+                },
+                {
+                    "stop_name": "Ocean Ave & Balboa Park",
+                    "location": {
+                        "latitude": 37.72282409667969,
+                        "longitude": -122.44642639160156
+                    }
+                },
+                {
+                    "stop_name": "Ocean Ave & Plymouth Ave",
+                    "location": {
+                        "latitude": 37.723812103271484,
+                        "longitude": -122.45590209960938
+                    }
+                },
+                {
+                    "stop_name": "Market St & Battery St",
+                    "location": {
+                        "latitude": 37.79096603393555,
+                        "longitude": -122.399169921875
+                    }
+                },
+                {
+                    "stop_name": "Corbett Ave & Iron Alley",
+                    "location": {
+                        "latitude": 37.757484436035156,
+                        "longitude": -122.44542694091797
+                    }
+                },
+                {
+                    "stop_name": "Market St & Eureka St",
+                    "location": {
+                        "latitude": 37.761627197265625,
+                        "longitude": -122.4386978149414
+                    }
+                },
+                {
+                    "stop_name": "Market St & Sanchez St",
+                    "location": {
+                        "latitude": 37.765995025634766,
+                        "longitude": -122.43083190917969
+                    }
+                },
+                {
+                    "stop_name": "Ocean Ave & Cerritos Ave",
+                    "location": {
+                        "latitude": 37.72701644897461,
+                        "longitude": -122.46638488769531
+                    }
+                },
+                {
+                    "stop_name": "Market St & Montgomery St",
+                    "location": {
+                        "latitude": 37.78827667236328,
+                        "longitude": -122.40255737304688
+                    }
+                },
+                {
+                    "stop_name": "Market St & Noe St",
+                    "location": {
+                        "latitude": 37.763668060302734,
+                        "longitude": -122.43384552001953
+                    }
+                },
+                {
+                    "stop_name": "Market St & Hyde St",
+                    "location": {
+                        "latitude": 37.77814865112305,
+                        "longitude": -122.41537475585938
+                    }
+                },
+                {
+                    "stop_name": "West Portal Ave & 15th Ave",
+                    "location": {
+                        "latitude": 37.73691177368164,
+                        "longitude": -122.47041320800781
+                    }
+                },
+                {
+                    "stop_name": "Twin Peaks Blvd",
+                    "location": {
+                        "latitude": 37.755455017089844,
+                        "longitude": -122.44837188720703
+                    }
+                },
+                {
+                    "stop_name": "Market St & Storrie St",
+                    "location": {
+                        "latitude": 37.76084518432617,
+                        "longitude": -122.44054412841797
+                    }
+                },
+                {
+                    "stop_name": "Market St & Jones St",
+                    "location": {
+                        "latitude": 37.780967712402344,
+                        "longitude": -122.41203308105469
+                    }
+                },
+                {
+                    "stop_name": "Market St & Mason St",
+                    "location": {
+                        "latitude": 37.78306579589844,
+                        "longitude": -122.40914916992188
+                    }
+                },
+                {
+                    "stop_name": "Embarcadero & Folsom St",
+                    "location": {
+                        "latitude": 37.791221618652344,
+                        "longitude": -122.3904800415039
+                    }
+                },
+                {
+                    "stop_name": "Betty Sutro Meadow",
+                    "location": {
+                        "latitude": 37.7500114440918,
+                        "longitude": -122.45630645751953
+                    }
+                },
+                {
+                    "stop_name": "King St & 3rd St",
+                    "location": {
+                        "latitude": 37.778404235839844,
+                        "longitude": -122.39146423339844
+                    }
+                },
+                {
+                    "stop_name": "Dewey Blvd & Pacheco St",
+                    "location": {
+                        "latitude": 37.74491500854492,
+                        "longitude": -122.46248626708984
+                    }
+                },
+                {
+                    "stop_name": "Taraval St & 23rd Ave",
+                    "location": {
+                        "latitude": 37.74296188354492,
+                        "longitude": -122.4800033569336
+                    }
+                },
+                {
+                    "stop_name": "Church St & 24th St",
+                    "location": {
+                        "latitude": 37.751827239990234,
+                        "longitude": -122.42749786376953
+                    }
+                },
+                {
+                    "stop_name": "Church St & Day St",
+                    "location": {
+                        "latitude": 37.74266815185547,
+                        "longitude": -122.4266128540039
+                    }
+                },
+                {
+                    "stop_name": "Dolores St & 30th St",
+                    "location": {
+                        "latitude": 37.74222946166992,
+                        "longitude": -122.42454528808594
+                    }
+                },
+                {
+                    "stop_name": "San Jose Ave & Santa Ynez Ave",
+                    "location": {
+                        "latitude": 37.725887298583984,
+                        "longitude": -122.44237518310547
+                    }
+                },
+                {
+                    "stop_name": "Market St & Laguna St",
+                    "location": {
+                        "latitude": 37.77091598510742,
+                        "longitude": -122.4246826171875
+                    }
+                },
+                {
+                    "stop_name": "Market St & Larkin St",
+                    "location": {
+                        "latitude": 37.7770881652832,
+                        "longitude": -122.41691589355469
+                    }
+                },
+                {
+                    "stop_name": "Sutro Reservoir",
+                    "location": {
+                        "latitude": 37.751792907714844,
+                        "longitude": -122.45370483398438
+                    }
+                }
+            ]
         }
     }
 }
