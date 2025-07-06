@@ -1,0 +1,878 @@
+[
+  {
+    "direction": "outbound",
+    "trip_id": "11735408_M21",
+    "endTimestamp": "2025-05-12T15:42:42",
+    "startTimestamp": "2025-05-12T15:03:12"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735409_M21",
+    "endTimestamp": "2025-05-12T15:48:42",
+    "startTimestamp": "2025-05-12T15:07:54"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735410_M21",
+    "endTimestamp": "2025-05-12T15:54:43",
+    "startTimestamp": "2025-05-12T15:17:18"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735411_M21",
+    "endTimestamp": "2025-05-12T16:09:55",
+    "startTimestamp": "2025-05-12T15:29:05"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735412_M21",
+    "endTimestamp": "2025-05-12T16:16:44",
+    "startTimestamp": "2025-05-12T15:40:05"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735413_M21",
+    "endTimestamp": "2025-05-12T16:28:29",
+    "startTimestamp": "2025-05-12T15:49:29"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735414_M21",
+    "endTimestamp": "2025-05-12T16:46:32",
+    "startTimestamp": "2025-05-12T16:08:06"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735415_M21",
+    "endTimestamp": "2025-05-12T16:49:09",
+    "startTimestamp": "2025-05-12T16:14:53"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735416_M21",
+    "endTimestamp": "2025-05-12T17:09:01",
+    "startTimestamp": "2025-05-12T16:31:22"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735417_M21",
+    "endTimestamp": "2025-05-12T17:11:07",
+    "startTimestamp": "2025-05-12T16:27:42"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735418_M21",
+    "endTimestamp": "2025-05-12T17:22:56",
+    "startTimestamp": "2025-05-12T16:46:00"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735419_M21",
+    "endTimestamp": "2025-05-12T17:27:07",
+    "startTimestamp": "2025-05-12T16:52:33"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735420_M21",
+    "endTimestamp": "2025-05-12T17:40:10",
+    "startTimestamp": "2025-05-12T17:02:14"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735421_M21",
+    "endTimestamp": "2025-05-12T17:47:45",
+    "startTimestamp": "2025-05-12T17:13:28"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735422_M21",
+    "endTimestamp": "2025-05-12T17:59:47",
+    "startTimestamp": "2025-05-12T17:23:27"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735423_M21",
+    "endTimestamp": "2025-05-12T18:04:30",
+    "startTimestamp": "2025-05-12T17:31:01"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735424_M21",
+    "endTimestamp": "2025-05-12T18:19:11",
+    "startTimestamp": "2025-05-12T17:40:57"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735425_M21",
+    "endTimestamp": "2025-05-12T18:34:21",
+    "startTimestamp": "2025-05-12T17:58:29"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735426_M21",
+    "endTimestamp": "2025-05-12T18:45:03",
+    "startTimestamp": "2025-05-12T18:04:30"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735427_M21",
+    "endTimestamp": "2025-05-12T18:53:10",
+    "startTimestamp": "2025-05-12T18:07:55"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735428_M21",
+    "endTimestamp": "2025-05-12T19:00:29",
+    "startTimestamp": "2025-05-12T18:25:42"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735429_M21",
+    "endTimestamp": "2025-05-12T19:06:15",
+    "startTimestamp": "2025-05-12T18:32:46"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735430_M21",
+    "endTimestamp": "2025-05-12T19:17:46",
+    "startTimestamp": "2025-05-12T18:41:08"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735431_M21",
+    "endTimestamp": "2025-05-12T19:28:13",
+    "startTimestamp": "2025-05-12T18:53:42"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735432_M21",
+    "endTimestamp": "2025-05-12T19:41:19",
+    "startTimestamp": "2025-05-12T19:02:35"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735433_M21",
+    "endTimestamp": "2025-05-12T19:52:17",
+    "startTimestamp": "2025-05-12T19:12:00"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735434_M21",
+    "endTimestamp": "2025-05-12T19:59:37",
+    "startTimestamp": "2025-05-12T19:22:13"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735435_M21",
+    "endTimestamp": "2025-05-12T20:16:21",
+    "startTimestamp": "2025-05-12T19:38:58"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735436_M21",
+    "endTimestamp": "2025-05-12T20:27:04",
+    "startTimestamp": "2025-05-12T19:48:06"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735437_M21",
+    "endTimestamp": "2025-05-12T20:31:45",
+    "startTimestamp": "2025-05-12T19:57:15"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735438_M21",
+    "endTimestamp": "2025-05-12T20:34:22",
+    "startTimestamp": "2025-05-12T20:01:11"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735439_M21",
+    "endTimestamp": "2025-05-12T20:46:56",
+    "startTimestamp": "2025-05-12T20:04:04"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735440_M21",
+    "endTimestamp": "2025-05-12T20:53:15",
+    "startTimestamp": "2025-05-12T20:12:42"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735441_M21",
+    "endTimestamp": "2025-05-12T21:08:09",
+    "startTimestamp": "2025-05-12T20:31:14"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735442_M21",
+    "endTimestamp": "2025-05-12T21:15:13",
+    "startTimestamp": "2025-05-12T20:40:39"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735443_M21",
+    "endTimestamp": "2025-05-12T21:20:58",
+    "startTimestamp": "2025-05-12T20:42:29"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735444_M21",
+    "endTimestamp": "2025-05-12T21:41:09",
+    "startTimestamp": "2025-05-12T21:00:03"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735445_M21",
+    "endTimestamp": "2025-05-12T21:47:11",
+    "startTimestamp": "2025-05-12T21:11:18"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735446_M21",
+    "endTimestamp": "2025-05-12T22:00:01",
+    "startTimestamp": "2025-05-12T21:20:27"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735447_M21",
+    "endTimestamp": "2025-05-12T22:19:09",
+    "startTimestamp": "2025-05-12T21:40:38"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735448_M21",
+    "endTimestamp": "2025-05-12T22:25:58",
+    "startTimestamp": "2025-05-12T21:39:03"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735365_M21",
+    "endTimestamp": "2025-05-12T22:34:21",
+    "startTimestamp": "2025-05-12T21:45:21"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735367_M21",
+    "endTimestamp": "2025-05-12T22:50:04",
+    "startTimestamp": "2025-05-12T22:09:58"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735368_M21",
+    "endTimestamp": "2025-05-12T23:09:31",
+    "startTimestamp": "2025-05-12T22:27:00"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735405_M21",
+    "endTimestamp": "2025-05-12T23:17:40",
+    "startTimestamp": "2025-05-12T22:27:00"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735369_M21",
+    "endTimestamp": "2025-05-12T23:26:19",
+    "startTimestamp": "2025-05-12T22:41:57"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735370_M21",
+    "endTimestamp": "2025-05-12T23:37:03",
+    "startTimestamp": "2025-05-12T22:53:14"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735371_M21",
+    "endTimestamp": "2025-05-12T23:45:41",
+    "startTimestamp": "2025-05-12T23:02:41"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735372_M21",
+    "endTimestamp": "2025-05-12T23:55:54",
+    "startTimestamp": "2025-05-12T23:17:56"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735373_M21",
+    "endTimestamp": "2025-05-13T00:02:59",
+    "startTimestamp": "2025-05-12T23:23:57"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735375_M21",
+    "endTimestamp": "2025-05-13T00:22:05",
+    "startTimestamp": "2025-05-12T23:44:07"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735374_M21",
+    "endTimestamp": "2025-05-13T00:22:21",
+    "startTimestamp": "2025-05-12T23:38:05"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735376_M21",
+    "endTimestamp": "2025-05-13T00:28:53",
+    "startTimestamp": "2025-05-12T23:51:27"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735377_M21",
+    "endTimestamp": "2025-05-13T00:40:24",
+    "startTimestamp": "2025-05-12T23:56:41"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735378_M21",
+    "endTimestamp": "2025-05-13T00:58:10",
+    "startTimestamp": "2025-05-13T00:13:11"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735379_M21",
+    "endTimestamp": "2025-05-13T00:59:13",
+    "startTimestamp": "2025-05-13T00:20:31"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735380_M21",
+    "endTimestamp": "2025-05-13T01:19:34",
+    "startTimestamp": "2025-05-13T00:40:39"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735381_M21",
+    "endTimestamp": "2025-05-13T01:25:19",
+    "startTimestamp": "2025-05-13T00:38:49"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735382_M21",
+    "endTimestamp": "2025-05-13T01:34:58",
+    "startTimestamp": "2025-05-13T00:59:44"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735385_M21",
+    "endTimestamp": "2025-05-13T02:04:10",
+    "startTimestamp": "2025-05-13T01:19:03"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735386_M21",
+    "endTimestamp": "2025-05-13T02:11:11",
+    "startTimestamp": "2025-05-13T01:27:40"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735460_M21",
+    "endTimestamp": "2025-05-13T02:21:34",
+    "startTimestamp": "2025-05-13T01:42:33"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735393_M21",
+    "endTimestamp": "2025-05-13T02:36:05",
+    "startTimestamp": "2025-05-13T01:45:41"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735394_M21",
+    "endTimestamp": "2025-05-13T02:42:03",
+    "startTimestamp": "2025-05-13T02:04:10"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735395_M21",
+    "endTimestamp": "2025-05-13T02:51:23",
+    "startTimestamp": "2025-05-13T02:15:51"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735456_M21",
+    "endTimestamp": "2025-05-13T03:03:48",
+    "startTimestamp": "2025-05-13T02:28:19"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735396_M21",
+    "endTimestamp": "2025-05-13T03:17:45",
+    "startTimestamp": "2025-05-13T02:44:23"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735397_M21",
+    "endTimestamp": "2025-05-13T03:34:19",
+    "startTimestamp": "2025-05-13T02:55:31"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735398_M21",
+    "endTimestamp": "2025-05-13T03:42:51",
+    "startTimestamp": "2025-05-13T03:07:10"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735399_M21",
+    "endTimestamp": "2025-05-13T03:45:57",
+    "startTimestamp": "2025-05-13T03:11:49"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735457_M21",
+    "endTimestamp": "2025-05-13T04:03:30",
+    "startTimestamp": "2025-05-13T03:30:57"
+  },
+  {
+    "direction": "outbound",
+    "trip_id": "11735400_M21",
+    "endTimestamp": "2025-05-13T04:17:28",
+    "startTimestamp": "2025-05-13T03:42:20"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735472_M21",
+    "endTimestamp": "2025-05-12T15:44:00",
+    "startTimestamp": "2025-05-12T15:05:33"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735473_M21",
+    "endTimestamp": "2025-05-12T16:06:15",
+    "startTimestamp": "2025-05-12T15:12:37"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735474_M21",
+    "endTimestamp": "2025-05-12T16:08:06",
+    "startTimestamp": "2025-05-12T15:17:03"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735475_M21",
+    "endTimestamp": "2025-05-12T16:22:29",
+    "startTimestamp": "2025-05-12T15:31:11"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735476_M21",
+    "endTimestamp": "2025-05-12T16:26:08",
+    "startTimestamp": "2025-05-12T15:35:07"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735477_M21",
+    "endTimestamp": "2025-05-12T16:38:57",
+    "startTimestamp": "2025-05-12T15:44:47"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735478_M21",
+    "endTimestamp": "2025-05-12T16:45:12",
+    "startTimestamp": "2025-05-12T15:50:32"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735479_M21",
+    "endTimestamp": "2025-05-12T16:56:12",
+    "startTimestamp": "2025-05-12T15:56:17"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735480_M21",
+    "endTimestamp": "2025-05-12T17:06:25",
+    "startTimestamp": "2025-05-12T16:18:02"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735481_M21",
+    "endTimestamp": "2025-05-12T17:17:40",
+    "startTimestamp": "2025-05-12T16:18:02"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735482_M21",
+    "endTimestamp": "2025-05-12T17:25:17",
+    "startTimestamp": "2025-05-12T16:31:22"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735483_M21",
+    "endTimestamp": "2025-05-12T17:35:59",
+    "startTimestamp": "2025-05-12T16:49:09"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735484_M21",
+    "endTimestamp": "2025-05-12T17:51:56",
+    "startTimestamp": "2025-05-12T16:53:04"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735485_M21",
+    "endTimestamp": "2025-05-12T18:03:59",
+    "startTimestamp": "2025-05-12T17:11:07"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735486_M21",
+    "endTimestamp": "2025-05-12T18:06:52",
+    "startTimestamp": "2025-05-12T17:16:05"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735487_M21",
+    "endTimestamp": "2025-05-12T18:18:55",
+    "startTimestamp": "2025-05-12T17:24:45"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735488_M21",
+    "endTimestamp": "2025-05-12T18:28:03",
+    "startTimestamp": "2025-05-12T17:29:12"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735489_M21",
+    "endTimestamp": "2025-05-12T18:35:39",
+    "startTimestamp": "2025-05-12T17:43:18"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735490_M21",
+    "endTimestamp": "2025-05-12T18:51:36",
+    "startTimestamp": "2025-05-12T17:50:22"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735491_M21",
+    "endTimestamp": "2025-05-12T18:57:21",
+    "startTimestamp": "2025-05-12T18:01:53"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735492_M21",
+    "endTimestamp": "2025-05-12T19:05:44",
+    "startTimestamp": "2025-05-12T18:07:23"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735493_M21",
+    "endTimestamp": "2025-05-12T19:17:30",
+    "startTimestamp": "2025-05-12T18:22:03"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735494_M21",
+    "endTimestamp": "2025-05-12T19:32:24",
+    "startTimestamp": "2025-05-12T18:37:29"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735495_M21",
+    "endTimestamp": "2025-05-12T19:39:45",
+    "startTimestamp": "2025-05-12T18:48:59"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735496_M21",
+    "endTimestamp": "2025-05-12T19:51:30",
+    "startTimestamp": "2025-05-12T18:54:29"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735497_M21",
+    "endTimestamp": "2025-05-12T19:54:54",
+    "startTimestamp": "2025-05-12T19:02:04"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735498_M21",
+    "endTimestamp": "2025-05-12T20:02:45",
+    "startTimestamp": "2025-05-12T19:08:05"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735499_M21",
+    "endTimestamp": "2025-05-12T20:11:39",
+    "startTimestamp": "2025-05-12T19:19:51"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735500_M21",
+    "endTimestamp": "2025-05-12T20:22:22",
+    "startTimestamp": "2025-05-12T19:30:50"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735501_M21",
+    "endTimestamp": "2025-05-12T20:34:53",
+    "startTimestamp": "2025-05-12T19:43:08"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735502_M21",
+    "endTimestamp": "2025-05-12T20:41:10",
+    "startTimestamp": "2025-05-12T19:56:12"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735503_M21",
+    "endTimestamp": "2025-05-12T20:54:02",
+    "startTimestamp": "2025-05-12T20:02:30"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735504_M21",
+    "endTimestamp": "2025-05-12T21:07:06",
+    "startTimestamp": "2025-05-12T20:18:11"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735505_M21",
+    "endTimestamp": "2025-05-12T21:13:55",
+    "startTimestamp": "2025-05-12T20:30:12"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735506_M21",
+    "endTimestamp": "2025-05-12T21:30:40",
+    "startTimestamp": "2025-05-12T20:33:51"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735507_M21",
+    "endTimestamp": "2025-05-12T21:35:38",
+    "startTimestamp": "2025-05-12T20:38:17"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735556_M21",
+    "endTimestamp": "2025-05-12T21:44:18",
+    "startTimestamp": "2025-05-12T20:48:31"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735508_M21",
+    "endTimestamp": "2025-05-12T21:53:27",
+    "startTimestamp": "2025-05-12T20:54:18"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735509_M21",
+    "endTimestamp": "2025-05-12T22:04:12",
+    "startTimestamp": "2025-05-12T21:10:15"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735510_M21",
+    "endTimestamp": "2025-05-12T22:20:13",
+    "startTimestamp": "2025-05-12T21:17:03"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735511_M21",
+    "endTimestamp": "2025-05-12T22:25:58",
+    "startTimestamp": "2025-05-12T21:24:54"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735512_M21",
+    "endTimestamp": "2025-05-12T22:35:55",
+    "startTimestamp": "2025-05-12T21:43:47"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735513_M21",
+    "endTimestamp": "2025-05-12T22:48:14",
+    "startTimestamp": "2025-05-12T21:49:32"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735514_M21",
+    "endTimestamp": "2025-05-12T22:56:55",
+    "startTimestamp": "2025-05-12T22:01:51"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735515_M21",
+    "endTimestamp": "2025-05-12T23:11:21",
+    "startTimestamp": "2025-05-12T22:22:18"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735516_M21",
+    "endTimestamp": "2025-05-12T23:18:43",
+    "startTimestamp": "2025-05-12T22:28:03"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735517_M21",
+    "endTimestamp": "2025-05-12T23:31:33",
+    "startTimestamp": "2025-05-12T22:36:26"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735518_M21",
+    "endTimestamp": "2025-05-12T23:38:05",
+    "startTimestamp": "2025-05-12T22:38:01"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735519_M21",
+    "endTimestamp": "2025-05-12T23:47:16",
+    "startTimestamp": "2025-05-12T22:52:27"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735520_M21",
+    "endTimestamp": "2025-05-12T23:55:39",
+    "startTimestamp": "2025-05-12T23:12:24"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735521_M21",
+    "endTimestamp": "2025-05-13T00:07:41",
+    "startTimestamp": "2025-05-12T23:19:30"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735522_M21",
+    "endTimestamp": "2025-05-13T00:15:01",
+    "startTimestamp": "2025-05-12T23:29:11"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735523_M21",
+    "endTimestamp": "2025-05-13T00:34:54",
+    "startTimestamp": "2025-05-12T23:40:59"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735524_M21",
+    "endTimestamp": "2025-05-13T00:37:47",
+    "startTimestamp": "2025-05-12T23:49:22"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735525_M21",
+    "endTimestamp": "2025-05-13T00:53:13",
+    "startTimestamp": "2025-05-12T23:58:16"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735526_M21",
+    "endTimestamp": "2025-05-13T00:57:55",
+    "startTimestamp": "2025-05-13T00:06:39"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735527_M21",
+    "endTimestamp": "2025-05-13T01:05:13",
+    "startTimestamp": "2025-05-13T00:24:10"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735528_M21",
+    "endTimestamp": "2025-05-13T01:17:29",
+    "startTimestamp": "2025-05-13T00:24:57"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735529_M21",
+    "endTimestamp": "2025-05-13T01:26:21",
+    "startTimestamp": "2025-05-13T00:31:14"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735534_M21",
+    "endTimestamp": "2025-05-13T01:36:32",
+    "startTimestamp": "2025-05-13T00:44:19"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735535_M21",
+    "endTimestamp": "2025-05-13T01:44:38",
+    "startTimestamp": "2025-05-13T01:00:16"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735536_M21",
+    "endTimestamp": "2025-05-13T01:58:10",
+    "startTimestamp": "2025-05-13T01:01:18"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735559_M21",
+    "endTimestamp": "2025-05-13T02:11:42",
+    "startTimestamp": "2025-05-13T01:23:13"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735560_M21",
+    "endTimestamp": "2025-05-13T02:23:39",
+    "startTimestamp": "2025-05-13T01:27:24"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735540_M21",
+    "endTimestamp": "2025-05-13T02:37:39",
+    "startTimestamp": "2025-05-13T01:36:16"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735544_M21",
+    "endTimestamp": "2025-05-13T02:43:36",
+    "startTimestamp": "2025-05-13T01:50:22"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735537_M21",
+    "endTimestamp": "2025-05-13T03:01:12",
+    "startTimestamp": "2025-05-13T02:07:01"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735538_M21",
+    "endTimestamp": "2025-05-13T03:07:10",
+    "startTimestamp": "2025-05-13T02:13:16"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735539_M21",
+    "endTimestamp": "2025-05-13T03:26:18",
+    "startTimestamp": "2025-05-13T02:52:09"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735541_M21",
+    "endTimestamp": "2025-05-13T03:36:07",
+    "startTimestamp": "2025-05-13T02:45:25"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735561_M21",
+    "endTimestamp": "2025-05-13T03:46:12",
+    "startTimestamp": "2025-05-13T02:53:42"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735542_M21",
+    "endTimestamp": "2025-05-13T03:51:06",
+    "startTimestamp": "2025-05-13T03:06:08"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735543_M21",
+    "endTimestamp": "2025-05-13T04:03:45",
+    "startTimestamp": "2025-05-13T03:20:20"
+  },
+  {
+    "direction": "inbound",
+    "trip_id": "11735545_M21",
+    "endTimestamp": "2025-05-13T04:21:37",
+    "startTimestamp": "2025-05-13T03:37:09"
+  }
+]

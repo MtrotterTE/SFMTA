@@ -1,10 +1,17 @@
 import { readFile } from 'fs/promises';
 import fs from "fs";
+import { start } from 'repl';
 
-const sfmtaDataFile = './gfts_realtime_data_2025-05-11_8:00.json';
+const sfmtaDataFile = './gfts_realtime_data_2025-05-16_8:00.json';
 const stopsFile = './stops.json'
 let finalData = {};
 let index = 0;
+let tripIdStartMapInbound = new Map();
+let tripIdEndMapInbound = new Map();
+let tripIdStartMapOutbound = new Map();
+let tripIdEndMapOutbound = new Map();
+let tempArrayFullTrips = [];
+
 
 async function readFiles() {
     try {
@@ -361,12 +368,68 @@ async function readFiles() {
                 }
             }
             traversedKLineData.push(entity);
+
+            // ----------------------- Start of tripId logic -----------------------
+            if (entity.direction_id === 0) { // outbound
+                if (isWithinDistance(entity.latitude, entity.longitude, 37.793138, -122.396532, 500)) { // Embarcadero Station
+                    if (!tripIdStartMapOutbound.has(entity.trip_id)) {
+                        tripIdStartMapOutbound.set(entity.trip_id, entity.timestamp);
+                    }
+                }
+                if (isWithinDistance(entity.latitude, entity.longitude, 37.721809,-122.447425, 500)) { // Balboa Park BART Mezzanine Level
+                    if (tripIdStartMapOutbound.has(entity.trip_id) && !tripIdEndMapOutbound.has(entity.trip_id)) {
+                        tripIdEndMapOutbound.set(entity.trip_id, entity.timestamp);
+                    }
+                }
+            } else if (entity.direction_id === 1) { // inbound
+                if (isWithinDistance(entity.latitude, entity.longitude, 37.721238, -122.446222, 500)) { // San Jose & Geneva Ave
+                    if (!tripIdStartMapInbound.has(entity.trip_id)) {
+                        tripIdStartMapInbound.set(entity.trip_id, entity.timestamp);
+                    }
+                }
+                if (isWithinDistance(entity.latitude, entity.longitude, 37.793138,-122.396532, 500)) { // Embarcadero Station
+                    if (tripIdStartMapInbound.has(entity.trip_id) && !tripIdEndMapInbound.has(entity.trip_id)) {
+                        tripIdEndMapInbound.set(entity.trip_id, entity.timestamp);
+                    }
+                }
+            }
+            let tempArrayFullTripsOutbound = [];
+            let tempArrayFullTripsInbound = [];
+            tripIdEndMapOutbound.forEach((timestamp, tripId) => {
+                tempArrayFullTripsOutbound.push({
+                    direction: 'outbound',
+                    trip_id: tripId,
+                    endTimestamp: timestamp,
+                    startTimestamp: tripIdStartMapOutbound.get(tripId)
+                });
+            });
+            tripIdEndMapInbound.forEach((timestamp, tripId) => {
+                tempArrayFullTripsInbound.push({
+                    direction: 'inbound',
+                    trip_id: tripId,
+                    endTimestamp: timestamp,
+                    startTimestamp: tripIdStartMapInbound.get(tripId)
+                });
+            });
+            tempArrayFullTrips = [...tempArrayFullTripsOutbound, ...tempArrayFullTripsInbound];
+            // ----------------------- End of tripId logic -----------------------
         });
 
         // Convert parent object to JSON string
         const finalDataJSON = JSON.stringify(finalData, null, 2);
         // Write to file
         fs.writeFile('stopData.json', finalDataJSON, (err) => {
+            if (err) {
+            console.error('Error writing file', err);
+            } else {
+            console.log('Successfully wrote file');
+            }
+        }); 
+
+        // Convert parent object to JSON string
+        const finalFullTripDataJSON = JSON.stringify(tempArrayFullTrips, null, 2);
+        // Write to file
+        fs.writeFile('stopFullTripData.json', finalFullTripDataJSON, (err) => {
             if (err) {
             console.error('Error writing file', err);
             } else {
