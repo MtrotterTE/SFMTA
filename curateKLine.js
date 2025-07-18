@@ -90,27 +90,12 @@ async function readFiles() {
                   // 3.12928 m/s = 7 mph
                   // vehicle is more than 7 mph since last data update, add stop data to final array
 
-                  let accurateTimeAtStop = 0;
-                  let accurateDistanceMoved = 0;
-
-                  // find the latest entity in traversedKLineData with the same vehicle_id
-                  for (let i = traversedKLineData.length - 1; i >= 0; i--) {
-                    if (
-                      traversedKLineData[i].vehicle_id === entity.vehicle_id
-                    ) {
-                      accurateTimeAtStop = getTimeDifferenceInSeconds(
-                        stoppedEntity.timestamp,
-                        traversedKLineData[i].timestamp
-                      );
-                      accurateDistanceMoved = getDistanceInFeet(
-                        stoppedEntity.latitude,
-                        stoppedEntity.longitude,
-                        traversedKLineData[i].latitude,
-                        traversedKLineData[i].longitude
-                      );
-                      break; // exit loop once found
-                    }
-                  }
+                  let { accurateTimeAtStop, accurateDistanceMoved } =
+                    getTimeAndDistDelta(
+                      traversedKLineData,
+                      entity,
+                      stoppedEntity
+                    );
 
                   let tempOriginalEntity = stoppedEntity;
                   tempOriginalEntity.timeAtStop = accurateTimeAtStop;
@@ -221,6 +206,17 @@ async function readFiles() {
             }
           });
         } else {
+          const previousEntity = getPreviousEntity(
+            traversedKLineData,
+            entity.vehicle_id
+          );
+          const timeToPreviousEntity = previousEntity
+            ? getTimeDifferenceInSeconds(
+                previousEntity.timestamp,
+                entity.timestamp
+              )
+            : null;
+          entity.timeToPreviousEntity = timeToPreviousEntity;
           vehicleStoppedArrayK.push(entity.vehicle_id);
           // start data curation
           // push entity to array
@@ -240,25 +236,8 @@ async function readFiles() {
               // cycle though westbound or eastbound stops
               // check if vehicle is at stop
 
-              let accurateTimeAtStop = 0;
-              let accurateDistanceMoved = 0;
-
-              // find the latest entity in traversedKLineData with the same vehicle_id
-              for (let i = traversedKLineData.length - 1; i >= 0; i--) {
-                if (traversedKLineData[i].vehicle_id === entity.vehicle_id) {
-                  accurateTimeAtStop = getTimeDifferenceInSeconds(
-                    stoppedEntity.timestamp,
-                    traversedKLineData[i].timestamp
-                  );
-                  accurateDistanceMoved = getDistanceInFeet(
-                    stoppedEntity.latitude,
-                    stoppedEntity.longitude,
-                    traversedKLineData[i].latitude,
-                    traversedKLineData[i].longitude
-                  );
-                  break; // exit loop once found
-                }
-              }
+              let { accurateTimeAtStop, accurateDistanceMoved } =
+                getTimeAndDistDelta(traversedKLineData, entity, stoppedEntity);
 
               let tempOriginalEntity = stoppedEntity;
               tempOriginalEntity.timeAtStop = accurateTimeAtStop;
@@ -402,25 +381,12 @@ async function readFiles() {
                 // if speed is greater than 7 mph
                 // vehicle is more than 7 mph since last data update, add stop data to final array
 
-                let accurateTimeAtStop = 0;
-                let accurateDistanceMoved = 0;
-
-                // find the latest entity in traversedKLineData with the same vehicle_id
-                for (let i = traversedKLineData.length - 1; i >= 0; i--) {
-                  if (traversedKLineData[i].vehicle_id === entity.vehicle_id) {
-                    accurateTimeAtStop = getTimeDifferenceInSeconds(
-                      stoppedEntity.timestamp,
-                      traversedKLineData[i].timestamp
-                    );
-                    accurateDistanceMoved = getDistanceInFeet(
-                      stoppedEntity.latitude,
-                      stoppedEntity.longitude,
-                      traversedKLineData[i].latitude,
-                      traversedKLineData[i].longitude
-                    );
-                    break; // exit loop once found
-                  }
-                }
+                let { accurateTimeAtStop, accurateDistanceMoved } =
+                  getTimeAndDistDelta(
+                    traversedKLineData,
+                    entity,
+                    stoppedEntity
+                  );
 
                 let tempOriginalEntity = stoppedEntity;
                 tempOriginalEntity.timeAtStop = accurateTimeAtStop;
@@ -657,6 +623,46 @@ async function readFiles() {
   } catch (error) {
     console.error("Error reading files:", error);
   }
+}
+
+function getPreviousEntity(traversedKLineData, vehicleId) {
+  for (let i = traversedKLineData.length - 1; i >= 0; i--) {
+    if (traversedKLineData[i].vehicle_id === vehicleId) {
+      return traversedKLineData[i];
+    }
+  }
+}
+
+function getTimeAndDistDelta(traversedKLineData, entity, stoppedEntity) {
+  // find the latest entity in traversedKLineData with the same vehicle_id
+
+  //          stopped        prevEntity     entity
+  //   10        0     0       0             10
+
+  //          stopped / prevEntity     entity
+  //   10            0                  10
+
+  const prevEntity = getPreviousEntity(traversedKLineData, entity.vehicle_id);
+  if (prevEntity) {
+    let accurateTimeAtStop = getTimeDifferenceInSeconds(
+      stoppedEntity.timestamp,
+      prevEntity.timestamp
+    );
+    const accurateDistanceMoved = getDistanceInFeet(
+      stoppedEntity.latitude,
+      stoppedEntity.longitude,
+      prevEntity.latitude,
+      prevEntity.longitude
+    );
+
+    let extraTimeBack =
+      getTimeDifferenceInSeconds(prevEntity.timestamp, entity.timestamp) / 2;
+
+    const extraTimeFront = stoppedEntity.timeToPreviousEntity / 2;
+    accurateTimeAtStop += extraTimeFront;
+    accurateTimeAtStop += extraTimeBack;
+    return { accurateTimeAtStop, accurateDistanceMoved };
+  } else return { accurateTimeAtStop: 0, accurateDistanceMoved: 0 };
 }
 
 function getTimeDifferenceInSeconds(timestamp1, timestamp2) {
