@@ -1,7 +1,7 @@
 import { readFile } from "fs/promises";
 import fs from "fs";
 
-const sfmtaDataFile = "./gfts_realtime_data_2025-05-16_8-00.json";
+const sfmtaDataFile = "./gfts_realtime_data_2025-05-11_8-00.json";
 const stopsFile = "./stops.json";
 let finalData = {};
 let index = 0;
